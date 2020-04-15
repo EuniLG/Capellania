@@ -1,50 +1,189 @@
-body {
-  
+/* CSS Para la navbar */
+
+body{
+    font-family: montserrat; 
 }
 
-.main {
-    margin-top: 0px;
+nav{
+    background: #0082E6;
+    height: 80px;
+    width:100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover{
+    background: #1B9BFF;
+    transition: .5s; 
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: #0082E6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+section{
+    background: url(propuesta/iglesia.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+
+
+
+/* CSS para los containers */
+.container {
+    margin-top: 20px;
     margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 20px;
-  /* margin: auto; 
+    
+  /*margin-right: 0px;
+    margin-left: 10px; 
+    margin: auto; 
   height: 500px;
   width: 300px;*/
   background: #edebe8;
   z-index: 1;
-  position: relative;
-  top: 40px;
+  
+  
   /* -webkit-box-shadow: -2px 6px 52px -2px rgba(0,0,0,0.75);
 -moz-box-shadow: -2px 6px 52px -2px rgba(0,0,0,0.75);
 box-shadow: -2px 6px 52px -2px rgba(0,0,0,0.75); */
 }
 
-.avatar {
+/* .avatar {
   width: 200px;
 	height: 200px;
-  position: relative;
-  top: 10px;
-  left: 10px;
+    position: relative;
+  top: 0px;
+  left: 5px;
 	background: #d9d8d6;
   border-radius: 20px;
   z-index: 2;
-  animation: 2s fadeIn infinite;
-  animation: 2s fadeOut infinite alternate;
-}
+  
+} 
 
 .name {
-  width: 500px;
-	height: 30px;
-  position: relative;
-  bottom: 80px;
-  left: 300px;
-	background: #d9d8d6;
+  	background: #d9d8d6;
   z-index: 2;
   animation: 2s fadeIn infinite;
   animation: 2s fadeOut infinite alternate;
-}
+} */ */
 
-.location {
+/* .location {
   width: 500px;
 	height: 30px;
   position: relative;
@@ -54,9 +193,9 @@ box-shadow: -2px 6px 52px -2px rgba(0,0,0,0.75); */
   z-index: 2;
   animation: 2s fadeIn infinite;
   animation: 2s fadeOut infinite alternate;
-}
+} */
 
-.bio {
+/* .bio {
   width: 1000px;
 	height: 90px;
   position: relative;
@@ -66,9 +205,9 @@ box-shadow: -2px 6px 52px -2px rgba(0,0,0,0.75); */
   z-index: 2;
   animation: 2s fadeIn infinite;
   animation: 2s fadeOut infinite alternate;
-}
+} */
 
-.gallary {
+/* .gallary {
   width: 1000px;
 	height: 250px;
   position: relative;
@@ -78,10 +217,10 @@ box-shadow: -2px 6px 52px -2px rgba(0,0,0,0.75); */
   z-index: 2;
   animation: fadeIn 2s infinite;
   animation: 2s fadeOut infinite alternate;
-}
+} */
 
 
-.divider_one {
+/* .divider_one {
   width: 250px;
 	height: 10px;
   margin: auto;
@@ -91,9 +230,9 @@ box-shadow: -2px 6px 52px -2px rgba(0,0,0,0.75); */
 	background: #edebe8;
   z-index: 2;
   transform: rotate(90deg);
-}
+} */
 
-.divider_two {
+/* .divider_two {
   width: 285px;
 	height: 10px;
   margin: auto;
@@ -102,9 +241,9 @@ box-shadow: -2px 6px 52px -2px rgba(0,0,0,0.75); */
   left: 2px;
 	background: #edebe8;
   z-index: 2;
-}
+} */
 
-         .fadeIn {
+     /*     .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   -webkit-animation-duration: 1s;
@@ -119,7 +258,7 @@ box-shadow: -2px 6px 52px -2px rgba(0,0,0,0.75); */
   @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
-  } 
+  } */ 
 
        /* .fadeOut {
   -webkit-animation-name: fadeOut;
